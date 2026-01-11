@@ -9,5 +9,6 @@ public class Main {
             System.out.println("\n \t It's not raining. Enjoy your day! \n ");
         }
         System.out.println("Main.main()");
+        System.out.println("Hello, World!");
     }
 }

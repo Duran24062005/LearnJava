@@ -66,7 +66,6 @@ public class Main {
                 }
 
             } catch (Exception e) {
-                // TODO: handle exception
                 System.out.println("Error: Por favor ingrese un número válido.");
                 sc.next(); // Limpiar el buffer del scanner
             }
