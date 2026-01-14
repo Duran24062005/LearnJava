@@ -49,4 +49,9 @@ public class House {
     public double calcularArea() {
         return size * size;
     }
+
+    @Override
+    public String toString() {
+        return super.toString();
+    }
 }
