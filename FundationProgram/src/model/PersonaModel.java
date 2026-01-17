@@ -39,8 +39,25 @@ public class PersonaModel implements IPersona {
         this.Address = address;
     }
 
+    // Getters
+    public String getFirstName() {
+        return FirstName;
+    }
+
+    public String getLastName() {
+        return LastName;
+    }
+
+    public int getAge() {
+        return Age;
+    }
+
     public String getDocument() {
         return Document;
+    }
+
+    public String getAddress() {
+        return Address;
     }
 
     @Override

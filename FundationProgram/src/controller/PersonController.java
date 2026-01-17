@@ -37,7 +37,7 @@ public class PersonController implements IController {
 
     @Override
     public void register() {
-        view.
+        System.out.println(service.toString());
     }
 }
 
