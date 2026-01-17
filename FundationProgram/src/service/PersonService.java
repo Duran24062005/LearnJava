@@ -96,20 +96,52 @@ public class PersonService implements IPersonService {
 
     }
 
+    // Mostrar persona especifica por su documento
     @Override
-    public void showOneByDocument() {
-        // TODO Auto-generated method stub
+    public void showOneByDocument(String document) {
+        PersonaModel person = repository.showOne(document);
 
+        if (person == null) {
+            System.out.println(
+                    "\n No person by with that document was found.");
+        }
+
+        System.out.println("\n Resulatdo de busqueda para: " + document);
+        person.introduceOneself();
+    }
+
+    // Mostrar personas por su nombre
+    @Override
+    public void searchByName(String name) {
+        List<PersonaModel> result = repository.findPersonByName(name);
+
+        if (result == null) {
+            System.out.println(
+                    "\n No people by with that name was found.");
+        }
+
+        System.out.println("\n Resultado de busqueda para el nombre: \"" + name + "\"");
+        System.out.println("=".repeat(60));
+        result.forEach(p -> p.toString());
+        System.out.println("=".repeat(60) + "\n");
     }
 
     @Override
-    public void searchByName() {
-    }
+    public void showStatistics() {
+        List<PersonaModel> all = repository.showAll();
 
-    @Override
-    public void showStatics() {
-        // TODO Auto-generated method stub
+        long empleados = all.stream().filter(p -> p instanceof EmpleadoModel).count();
+        long colaboradores = all.stream().filter(p -> p instanceof ColaboradorModel).count();
+        long beneficiarios = all.stream().filter(p -> p instanceof BeneficiciarioModel).count();
 
+        System.out.println("\n" + "=".repeat(60));
+        System.out.println("              ESTADÍSTICAS DEL SISTEMA");
+        System.out.println("=".repeat(60));
+        System.out.println("  Total de personas: " + all.size());
+        System.out.println("  Empleados: " + empleados);
+        System.out.println("  Colaboradores: " + colaboradores);
+        System.out.println("  Beneficiarios: " + beneficiarios);
+        System.out.println("=".repeat(60) + "\n");
     }
 
 }

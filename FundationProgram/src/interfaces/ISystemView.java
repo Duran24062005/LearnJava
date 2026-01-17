@@ -2,16 +2,18 @@ package interfaces;
 
 import java.util.Scanner;
 
+import model.PersonaModel;
+
 public interface ISystemView {
     int menu();
 
-    int registerCollaborator();
+    PersonaModel registerEmployee();
 
-    int registerEmployee();
+    PersonaModel registerCollaborator();
 
-    int registerBeneficiary();
+    PersonaModel registerBeneficiary();
 
-    int Salir();
+    String requestDocument();
 
     Scanner getScanner();
 }

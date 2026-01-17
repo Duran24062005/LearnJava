@@ -7,9 +7,9 @@ public interface IPersonService {
 
     void showPerson();
 
-    void showOneByDocument();
+    void showOneByDocument(String document);
 
-    void searchByName();
+    void searchByName(String name);
 
-    void showStatics();
+    void showStatistics();
 }
