@@ -15,7 +15,7 @@ public class SystemView implements ISystemView {
     @Override
     public int menu() {
         System.out.println("""
-
+                _________________________________________________________
                 ╔═══════════════════════════════════════════════════════╗
                 ║        FUNDACIÓN DE AYUDAS COMUNITARIAS               ║
                 ║              Sistema de Registro                      ║
@@ -29,6 +29,7 @@ public class SystemView implements ISystemView {
                     6. Ver estadísticas
                     7. Salir
                 ────────────────────────────────────────────────────────
+                ________________________________________________________
                 Opción: """);
 
         try {

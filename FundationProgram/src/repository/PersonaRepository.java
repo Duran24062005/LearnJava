@@ -45,6 +45,7 @@ public class PersonaRepository implements IPersonRepository {
         return persons.stream().filter(p -> p.getDocument().equals(document)).findFirst().orElse(null); // Si no
                                                                                                         // encuentra
                                                                                                         // nada, retorna
+                                                                                                        // null
     }
 
     // Verifica si existe una persona con el documento dado

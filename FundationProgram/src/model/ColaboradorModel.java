@@ -25,7 +25,7 @@ public class ColaboradorModel extends PersonaModel implements IPersona {
         }
         if (hours_for_month > MAX_HOURS) {
             throw new IllegalArgumentException(
-                    "The employee cannot have more than " + MAX_HOURS + "per month.");
+                    "The employee cannot have more than " + MAX_HOURS + " per month.");
         }
         this.hours_per_month = hours_for_month;
     }
