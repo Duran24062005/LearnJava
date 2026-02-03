@@ -1,8 +1,8 @@
-package interfaces;
+package org.example.interfaces;
 
 import java.util.List;
 
-import model.Persona;
+import org.example.model.Persona;
 
 public interface IPersonaRepository {
     public boolean crearPersona(Persona persona);

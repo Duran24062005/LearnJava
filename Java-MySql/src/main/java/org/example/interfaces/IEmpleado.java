@@ -1,4 +1,4 @@
-package interfaces;
+package org.example.interfaces;
 
 public interface IEmpleado {
 

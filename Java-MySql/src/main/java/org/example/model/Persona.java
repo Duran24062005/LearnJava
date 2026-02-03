@@ -1,4 +1,4 @@
-package model;
+package org.example.model;
 
 public class Persona {
     private String nombre, apellido;
@@ -45,8 +45,8 @@ public class Persona {
     }
 
     public void setEdad(int edad) {
-        if (edad > 0) {
-            throw new IllegalArgumentException("El nombre no puede ser menor 0");
+        if (edad <= 0) {
+            throw new IllegalArgumentException("El nombre no puede ser menor  o igual a 0");
         }
         this.edad = edad;
     }
@@ -58,7 +58,7 @@ public class Persona {
     @Override
     public String toString() {
         return """
-                Hola, %s %S tengo %s años y vivo en %s
+                Hola, %s %S tengo %s años
                 """.formatted(nombre, apellido, edad);
     }
 }
